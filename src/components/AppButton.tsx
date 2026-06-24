@@ -7,9 +7,15 @@ type AppButtonProps = {
   onPress: () => void;
 };
 
+const palette = colors.dark;
+
 export function AppButton({ label, onPress }: AppButtonProps) {
   return (
-    <Pressable accessibilityRole="button" onPress={onPress} style={styles.button}>
+    <Pressable
+      accessibilityRole="button"
+      onPress={onPress}
+      style={({ pressed }) => [styles.button, pressed && styles.buttonActive]}
+    >
       <Text style={styles.label}>{label}</Text>
     </Pressable>
   );
@@ -18,14 +24,16 @@ export function AppButton({ label, onPress }: AppButtonProps) {
 const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
-    backgroundColor: colors.primary,
+    backgroundColor: palette.primary,
     borderRadius: radius.md,
     paddingHorizontal: spacing.lg,
     paddingVertical: spacing.md,
   },
+  buttonActive: {
+    backgroundColor: palette.primaryHover,
+  },
   label: {
-    color: colors.textOnPrimary,
-    fontSize: typography.sizes.md,
-    fontWeight: '700',
+    ...typography.buttonLarge,
+    color: palette.textPrimary,
   },
 });
