@@ -7,6 +7,7 @@ export const colors = {
     secondaryAccent: '#7EE7C4',
     textPrimary: '#F5F7FA',
     textSecondary: '#A8B0C0',
+    textButton: '#F5F7FA',
     border: '#2A3140',
   },
   light: {
@@ -17,6 +18,7 @@ export const colors = {
     secondaryAccent: '#2CCDA6',
     textPrimary: '#1C2430',
     textSecondary: '#667085',
+    textButton: '#F5F7FA',
     border: '#E7ECF4',
   },
 } as const;

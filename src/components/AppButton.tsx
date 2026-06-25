@@ -20,7 +20,7 @@ export function AppButton({ label, onPress, colorMode = 'dark' }: AppButtonProps
         { backgroundColor: pressed ? palette.primaryHover : palette.primary },
       ]}
     >
-      <Text style={[styles.label, { color: palette.textPrimary }]}>{label}</Text>
+      <Text style={[styles.label, { color: palette.textButton }]}>{label}</Text>
     </Pressable>
   );
 }
