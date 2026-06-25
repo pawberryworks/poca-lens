@@ -35,7 +35,7 @@ export function HomeScreen() {
                 styles.toggleThumb,
                 {
                   backgroundColor: palette.primary,
-                  transform: [{ translateX: colorMode === 'dark' ? spacing.lg : 0 }],
+                  transform: [{ translateX: colorMode === 'dark' ? 70 : 0 }],
                 },
               ]}
             />
